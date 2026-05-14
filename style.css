@@ -9,32 +9,149 @@ article
 {font-family: Arial, Helvetica, sans-serif
 }
 
-nav
-{background-color: yellowgreen;}
+nav{
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.lista{
+    display: flex;
+    display: inline-block;
+    justify-content: space-between;
+    margin-right: 20px;
+
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
 nav:hover {background-color: crimson;}
 
 
 body
 {background-image: url(https://fastly.picsum.photos/id/14/2500/1667.jpg?hmac=ssQyTcZRRumHXVbQAVlXTx-MGBxm6NHWD3SryQ48G-o)}
 
-.contenitore {
-    display: flex; width: 60%;
-}
 
-.articolo {
+.articolo{
+    display: flex;
+    justify-content: space-between;
+    display: inline-block;
     background-color: rgba(243, 234, 111, 0.979);
 }
 
-.menu {
+.menu{
     display: flex;
     display: inline-block
 }
 
-.navbar:hover {
+.navbar:hover{
     border-bottom: 3px; border-bottom: solid; color: blue;
 }
 
+.imgArticle{
+    width: 300px;
+}
 
+.contenitore{
+    display: flex;
+    width: 60%
+}
+
+aside{
+background-color: yellowgreen;
+display: flex;
+justify-content: center;
+flex-direction: column;
+justify-content: center;
+}
+
+main{
+    display: flex;
+}
+
+footer{
+    display: flex;
+    justify-content: right;
+    height: 300px;
+}
+
+.buttontop{
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .navbar{
+        display: flex;
+        height: auto;
+    }
+
+    .lista{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: xx-small;
+    gap: 5px;
+    }
+
+    .logo{
+        width: 70px;
+        height: auto;
+    }
+
+    ,logo img {
+        width: 100%;
+    }
+
+    .contenitore{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .articolo{
+    flex-direction: column;
+    background-color: rgba(243, 234, 111, 0.979);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+aside{
+    display: flex;
+}
+
+.imgArticle{
+    width: 100%;
+}
+
+}
 
 
 
